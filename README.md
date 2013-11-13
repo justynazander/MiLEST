@@ -1,6 +1,7 @@
 Model-in-the-Loop for Embedded System Test (MiLEST)
 
-Developed in 2005 - 2008 by Justyna Zander and Abel Marrero Perez at Fraunhofer Institute FOKUS, Berlin, Germany. 
+Developed in 2005 - 2008 by Justyna Zander and Abel Marrero Perez, and Xuezheng Xiong at Fraunhofer Institute FOKUS, Berlin, Germany.
+Supervised by Ina Schieferdecker.
 
 ======
 The main contribution of this thesis applies to the software built into embedded systems. In particular, it refers to the software models from which systems are built. An approach to functional black-box testing based on the system models by providing a test model is developed. It is contrasted with the currently applied test methods that form dedicated solutions, usually specialized in a concrete testing context. The test framework proposed herewith, is realized in the MATLAB®/Simulink®/Stateflow® [MathML, MathSL, MathSF] environment and is called Model-in-the-Loop for Embedded System Test (MiLEST). 
