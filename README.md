@@ -1,6 +1,6 @@
 Model-in-the-Loop for Embedded System Test (MiLEST)
 
-Developed in 2005 - 2008 by Justyna Zander and Abel Marrero Perez, and Xuezheng Xiong at Fraunhofer Institute FOKUS, Berlin, Germany.
+Developed between 2005 and 2008 by Justyna Zander and Abel Marrero Perez, and Xuezheng Xiong at Fraunhofer Institute FOKUS, Berlin, Germany.
 Supervised by Ina Schieferdecker.
 
 ======
