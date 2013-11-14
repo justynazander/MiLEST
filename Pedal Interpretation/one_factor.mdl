@@ -1,0 +1,3161 @@
+Model {
+  Name			  "one_factor"
+  Version		  7.0
+  MdlSubVersion		  0
+  GraphicalInterface {
+    NumRootInports	    0
+    NumRootOutports	    2
+    Outport {
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
+      Name		      "v_Fzg"
+    }
+    Outport {
+      BusObject		      ""
+      BusOutputAsStruct	      "off"
+      Name		      "phi_Acc"
+    }
+    ParameterArgumentNames  ""
+    ComputedModelVersion    "1.48"
+    NumModelReferences	    0
+    NumTestPointedSignals   2
+    TestPointedSignal {
+      SignalName	      ""
+      FullBlockPath	      "one_factor/Generate constant 5"
+      LogSignal		      1
+      UseCustomName	      1
+      LogName		      "v_Fzg"
+      MaxPoints		      5000
+      Decimation	      2
+    }
+    TestPointedSignal {
+      SignalName	      ""
+      FullBlockPath	      "one_factor/Generate decrease 6"
+      LogSignal		      1
+      UseCustomName	      1
+      LogName		      "phi_Acc"
+      MaxPoints		      5000
+      Decimation	      2
+    }
+  }
+  SavedCharacterEncoding  "windows-1252"
+  SaveDefaultBlockParams  on
+  SampleTimeColors	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  DataTypeOverride	  "UseLocalSettings"
+  MinMaxOverflowLogging	  "UseLocalSettings"
+  MinMaxOverflowArchiveMode "Overwrite"
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  Created		  "Wed Dec 05 10:18:49 2007"
+  Creator		  "xux"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "jza"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Wed May 14 17:57:19 2008"
+  RTWModifiedTimeStamp	  0
+  ModelVersionFormat	  "1.%<AutoIncrement:48>"
+  ConfigurationManager	  "None"
+  SimulationMode	  "normal"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  TryForcingSFcnDF	  off
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeVarName	  "covCumulativeData"
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  BufferReuse		  on
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  Array {
+    Type		    "Handle"
+    Dimension		    1
+    Simulink.ConfigSet {
+      $ObjectID		      1
+      Version		      "1.3.0"
+      Array {
+	Type			"Handle"
+	Dimension		7
+	Simulink.SolverCC {
+	  $ObjectID		  2
+	  Version		  "1.3.0"
+	  StartTime		  "0.0"
+	  StopTime		  "10.0"
+	  AbsTol		  "auto"
+	  FixedStep		  "0.01"
+	  InitialStep		  "auto"
+	  MaxNumMinSteps	  "-1"
+	  MaxOrder		  5
+	  ConsecutiveZCsStepRelTol "10*128*eps"
+	  MaxConsecutiveZCs	  "1000"
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "auto"
+	  MinStep		  "auto"
+	  MaxConsecutiveMinStep	  "1"
+	  RelTol		  "1e-3"
+	  SolverMode		  "Auto"
+	  Solver		  "ode4"
+	  SolverName		  "ode4"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  AlgebraicLoopSolver	  "TrustRegion"
+	  SolverResetMethod	  "Fast"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  RateTranMode		  "Deterministic"
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  3
+	  Version		  "1.3.0"
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  on
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveFormat		  "Array"
+	  SaveOutput		  on
+	  SaveState		  off
+	  SignalLogging		  on
+	  InspectSignalLogs	  off
+	  SaveTime		  on
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "logsout"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  Refine		  "1"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  4
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    5
+	    Cell		    "ZeroExternalMemoryAtStartup"
+	    Cell		    "ZeroInternalMemoryAtStartup"
+	    Cell		    "InitFltsAndDblsToZero"
+	    Cell		    "OptimizeModelRefInitCode"
+	    Cell		    "NoFixptDivByZeroProtection"
+	    PropName		    "DisabledProps"
+	  }
+	  Version		  "1.3.0"
+	  BlockReduction	  on
+	  BooleanDataType	  on
+	  ConditionallyExecuteInputs on
+	  InlineParams		  off
+	  InlineInvariantSignals  off
+	  OptimizeBlockIOStorage  on
+	  BufferReuse		  on
+	  EnforceIntegerDowncast  on
+	  ExpressionFolding	  on
+	  ExpressionDepthLimit	  2147483647
+	  FoldNonRolledExpr	  on
+	  LocalBlockOutputs	  on
+	  RollThreshold		  5
+	  SystemCodeInlineAuto	  off
+	  StateBitsets		  off
+	  DataBitsets		  off
+	  UseTempVars		  off
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  on
+	  NoFixptDivByZeroProtection off
+	  EfficientFloat2IntCast  off
+	  OptimizeModelRefInitCode off
+	  LifeSpan		  "inf"
+	  BufferReusableBoundary  on
+	  SimCompilerOptimization "Off"
+	  AccelVerboseBuild	  off
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  5
+	  Version		  "1.3.0"
+	  RTPrefix		  "error"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  SignalInfNanChecking	  "none"
+	  SignalRangeChecking	  "none"
+	  ReadBeforeWriteMsg	  "UseLocalSettings"
+	  WriteAfterWriteMsg	  "UseLocalSettings"
+	  WriteAfterReadMsg	  "UseLocalSettings"
+	  AlgebraicLoopMsg	  "warning"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  SaveWithDisabledLinksMsg "warning"
+	  SaveWithParameterizedLinksMsg	"none"
+	  CheckSSInitialOutputMsg on
+	  CheckExecutionContextPreStartOutputMsg off
+	  CheckExecutionContextRuntimeOutputMsg	off
+	  SignalResolutionControl "UseLocalSettings"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  TimeAdjustmentMsg	  "none"
+	  MaxConsecutiveZCsMsg	  "error"
+	  SolverPrmCheckMsg	  "warning"
+	  InheritedTsInSrcMsg	  "warning"
+	  DiscreteInheritContinuousMsg "warning"
+	  MultiTaskDSMMsg	  "error"
+	  MultiTaskCondExecSysMsg "error"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  SigSpecEnsureSampleTimeMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "warning"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterUnderflowMsg	  "none"
+	  ParameterPrecisionLossMsg "warning"
+	  ParameterTunabilityLossMsg "warning"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  InvalidFcnCallConnMsg	  "error"
+	  FcnCallInpInsideContextMsg "Use local settings"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  SFcnCompatibilityMsg	  "none"
+	  UniqueDataStoreMsg	  "none"
+	  BusObjectLabelMismatch  "warning"
+	  RootOutportRequireBusObject "warning"
+	  AssertControl		  "UseLocalSettings"
+	  EnableOverflowDetection off
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  ModelReferenceCSMismatchMessage "none"
+	  ModelReferenceSimTargetVerbose off
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	  ModelReferenceExtraNoncontSigs "error"
+	  StateNameClashWarn	  "warning"
+	  StrictBusMsg		  "Warning"
+	  LoggingUnavailableSignals "error"
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  6
+	  Version		  "1.3.0"
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  32
+	  ProdBitPerLong	  32
+	  ProdIntDivRoundTo	  "Undefined"
+	  ProdEndianess		  "Unspecified"
+	  ProdWordSize		  32
+	  ProdShiftRightIntArith  on
+	  ProdHWDeviceType	  "32-bit Generic"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetShiftRightIntArith on
+	  TargetIntDivRoundTo	  "Undefined"
+	  TargetEndianess	  "Unspecified"
+	  TargetWordSize	  32
+	  TargetTypeEmulationWarnSuppressLevel 0
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "Specified"
+	  TargetUnknown		  off
+	  ProdEqTarget		  on
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  7
+	  Version		  "1.3.0"
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  CheckModelReferenceTargetMessage "error"
+	  ModelReferenceNumInstancesAllowed "Multi"
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  8
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    1
+	    Cell		    "IncludeHyperlinkInReport"
+	    PropName		    "DisabledProps"
+	  }
+	  Version		  "1.3.0"
+	  SystemTargetFile	  "grt.tlc"
+	  GenCodeOnly		  off
+	  MakeCommand		  "make_rtw"
+	  GenerateMakefile	  on
+	  TemplateMakefile	  "grt_default_tmf"
+	  GenerateReport	  off
+	  SaveLog		  off
+	  RTWVerbose		  on
+	  RetainRTWFile		  off
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  ProcessScriptMode	  "Default"
+	  ConfigurationMode	  "Optimized"
+	  ConfigAtBuild		  off
+	  IncludeHyperlinkInReport off
+	  LaunchReport		  off
+	  TargetLang		  "C"
+	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
+	  IncludeERTFirstTime	  off
+	  GenerateTraceInfo	  off
+	  RTWCompilerOptimization "Off"
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      9
+	      Array {
+		Type			"Cell"
+		Dimension		16
+		Cell			"IgnoreCustomStorageClasses"
+		Cell			"InsertBlockDesc"
+		Cell			"SFDataObjDesc"
+		Cell			"SimulinkDataObjDesc"
+		Cell			"DefineNamingRule"
+		Cell			"SignalNamingRule"
+		Cell			"ParamNamingRule"
+		Cell			"InlinedPrmAccess"
+		Cell			"CustomSymbolStr"
+		Cell			"CustomSymbolStrGlobalVar"
+		Cell			"CustomSymbolStrType"
+		Cell			"CustomSymbolStrField"
+		Cell			"CustomSymbolStrFcn"
+		Cell			"CustomSymbolStrBlkIO"
+		Cell			"CustomSymbolStrTmpVar"
+		Cell			"CustomSymbolStrMacro"
+		PropName		"DisabledProps"
+	      }
+	      Version		      "1.3.0"
+	      ForceParamTrailComments off
+	      GenerateComments	      on
+	      IgnoreCustomStorageClasses on
+	      IncHierarchyInIds	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement off
+	      IncAutoGenComments      off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      IncDataTypeInIds	      off
+	      MangleLength	      1
+	      CustomSymbolStrGlobalVar "$R$N$M"
+	      CustomSymbolStrType     "$N$R$M"
+	      CustomSymbolStrField    "$N$M"
+	      CustomSymbolStrFcn      "$R$N$M$F"
+	      CustomSymbolStrBlkIO    "rtb_$N$M"
+	      CustomSymbolStrTmpVar   "$N$M"
+	      CustomSymbolStrMacro    "$R$N$M"
+	      DefineNamingRule	      "None"
+	      ParamNamingRule	      "None"
+	      SignalNamingRule	      "None"
+	      InsertBlockDesc	      off
+	      SimulinkBlockComments   on
+	      EnableCustomComments    off
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      off
+	    }
+	    Simulink.GRTTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      10
+	      Array {
+		Type			"Cell"
+		Dimension		15
+		Cell			"IncludeMdlTerminateFcn"
+		Cell			"CombineOutputUpdateFcns"
+		Cell			"SuppressErrorStatus"
+		Cell			"ERTCustomFileBanners"
+		Cell			"GenerateSampleERTMain"
+		Cell			"GenerateTestInterfaces"
+		Cell			"ModelStepFunctionPrototypeControlCompliant"
+		Cell			"MultiInstanceERTCode"
+		Cell			"PurelyIntegerCode"
+		Cell			"SupportNonFinite"
+		Cell			"SupportComplex"
+		Cell			"SupportAbsoluteTime"
+		Cell			"SupportContinuousTime"
+		Cell			"SupportNonInlinedSFcns"
+		Cell			"PortableWordSizes"
+		PropName		"DisabledProps"
+	      }
+	      Version		      "1.3.0"
+	      TargetFcnLib	      "ansi_tfl_tmw.mat"
+	      TargetLibSuffix	      ""
+	      TargetPreCompLibLocation ""
+	      GenFloatMathFcnCalls    "ANSI_C"
+	      UtilityFuncGeneration   "Auto"
+	      GenerateFullHeader      on
+	      GenerateSampleERTMain   off
+	      GenerateTestInterfaces  off
+	      IsPILTarget	      off
+	      ModelReferenceCompliant on
+	      CompOptLevelCompliant   on
+	      IncludeMdlTerminateFcn  on
+	      CombineOutputUpdateFcns off
+	      SuppressErrorStatus     off
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    off
+	      SupportAbsoluteTime     on
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      on
+	      MultiInstanceERTCode    off
+	      SupportNonFinite	      on
+	      SupportComplex	      on
+	      PurelyIntegerCode	      off
+	      SupportContinuousTime   on
+	      SupportNonInlinedSFcns  on
+	      EnableShiftOperators    on
+	      ParenthesesLevel	      "Nominal"
+	      PortableWordSizes	      off
+	      ModelStepFunctionPrototypeControlCompliant off
+	      ExtMode		      off
+	      ExtModeStaticAlloc      off
+	      ExtModeTesting	      off
+	      ExtModeStaticAllocSize  1000000
+	      ExtModeTransport	      0
+	      ExtModeMexFile	      "ext_comm"
+	      ExtModeIntrfLevel	      "Level1"
+	      RTWCAPISignals	      off
+	      RTWCAPIParams	      off
+	      RTWCAPIStates	      off
+	      GenerateASAP2	      off
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	PropName		"Components"
+      }
+      Name		      "Configuration"
+      CurrentDlgPage	      "Solver"
+    }
+    PropName		    "ConfigurationSets"
+  }
+  Simulink.ConfigSet {
+    $PropName		    "ActiveConfigurationSet"
+    $ObjectID		    1
+  }
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Arial"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      Clock
+      DisplayTime	      off
+    }
+    Block {
+      BlockType		      Demux
+      Outputs		      "4"
+      DisplayOption	      "none"
+      BusSelectionMode	      off
+    }
+    Block {
+      BlockType		      From
+      IconDisplay	      "Tag"
+    }
+    Block {
+      BlockType		      Fcn
+      Expr		      "sin(u[1])"
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Goto
+      IconDisplay	      "Tag"
+    }
+    Block {
+      BlockType		      Ground
+    }
+    Block {
+      BlockType		      SignalConversion
+      OverrideOpt	      off
+    }
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      DataType		      "auto"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      LatchByDelayingOutsideSignal off
+      LatchByCopyingInsideSignal off
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      MultiPortSwitch
+      Inputs		      "4"
+      zeroidx		      off
+      InputSameDT	      on
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeMode	      "Inherit via internal rule"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      DataType		      "auto"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Reference
+    }
+    Block {
+      BlockType		      Scope
+      ModelBased	      off
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      Grid		      "on"
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      SignalSpecification
+      Dimensions	      "-1"
+      SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      DataType		      "auto"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+    }
+    Block {
+      BlockType		      "S-Function"
+      FunctionName	      "system"
+      SFunctionModules	      "''"
+      PortCounts	      "[]"
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      "FromPortIcon"
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      TreatAsAtomicUnit	      off
+      SystemSampleTime	      "-1"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      MinMaxOverflowLogging   "UseLocalSettings"
+    }
+    Block {
+      BlockType		      Sum
+      IconShape		      "rectangular"
+      Inputs		      "++"
+      CollapseMode	      "All dimensions"
+      CollapseDim	      "1"
+      InputSameDT	      on
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeMode	      "Same as first input"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Switch
+      Criteria		      "u2 >= Threshold"
+      Threshold		      "0"
+      InputSameDT	      on
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeMode	      "Inherit via internal rule"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      ZeroCross		      on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Terminator
+    }
+    Block {
+      BlockType		      Constant
+      Value		      "1"
+      VectorParams1D	      on
+      SamplingMode	      "Sample based"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeMode	      "Inherit from 'Constant value'"
+      OutDataType	      "fixdt(1,16,0)"
+      ConRadixGroup	      "Use specified scaling"
+      OutScaling	      "[]"
+      SampleTime	      "inf"
+      FramePeriod	      "inf"
+    }
+    Block {
+      BlockType		      Lookup
+      InputValues	      "[-4:5]"
+      Table		      " rand(1,10)-0.5"
+      LookUpMeth	      "Interpolation-Extrapolation"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeMode	      "Same as input"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+      LUTDesignTableMode      "Redesign Table"
+      LUTDesignDataSource     "Block Dialog"
+      LUTDesignFunctionName   "sqrt(x)"
+      LUTDesignUseExistingBP  on
+      LUTDesignRelError	      "0.01"
+      LUTDesignAbsError	      "1e-6"
+    }
+    Block {
+      BlockType		      RelationalOperator
+      Operator		      ">="
+      InputSameDT	      on
+      LogicOutDataTypeMode    "Logical (see Configuration Parameters: Optimization)"
+      LogicDataType	      "uint(8)"
+      ZeroCross		      on
+      SampleTime	      "-1"
+    }
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Arial"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    UseDisplayTextAsClickCallback off
+  }
+  LineDefaults {
+    FontName		    "Arial"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "one_factor"
+    Location		    [6, 82, 1274, 1000]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "A4"
+    PaperUnits		    "centimeters"
+    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+    TiledPageScale	    1
+    ShowPageBoundaries	    off
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      SubSystem
+      Name		      "Generate constant 5"
+      Ports		      [0, 1]
+      Position		      [120, 212, 155, 248]
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Port {
+	PortNumber		1
+	TestPoint		on
+	RTWStorageClass		"Auto"
+	DataLogging		on
+	DataLoggingNameMode	"Custom"
+	DataLoggingName		"v_Fzg"
+      }
+      System {
+	Name			"Generate constant 5"
+	Location		[210, 367, 712, 719]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Generate \nconstant\nfor partition1 variant1 1"
+	  Ports			  [0, 1]
+	  Position		  [50, 21, 150, 59]
+	  MinAlgLoopOccurrences	  off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  MaskType		  "Feature generation"
+	  MaskDescription	  "Output a decreasing ramp signal limited from bottom and top, starting at the specified time."
+	  MaskPromptString	  "Constant value:|Duration"
+	  MaskStyleString	  "edit,edit"
+	  MaskTunableValueString  "on,on"
+	  MaskCallbackString	  "|"
+	  MaskEnableString	  "on,on"
+	  MaskVisibilityString	  "on,on"
+	  MaskToolTipString	  "on,on"
+	  MaskVarAliasString	  ","
+	  MaskVariables		  "X0=@1;T=@2;"
+	  MaskDisplay		  "plot([1:2],[4,4])\n"
+	  MaskSelfModifiable	  on
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "-10|2"
+	  MaskTabNameString	  ","
+	  System {
+	    Name		    "Generate \nconstant\nfor partition1 variant1 1"
+	    Location		    [2, 82, 1270, 776]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Repeating\nSequence"
+	      Ports		      [0, 1]
+	      Position		      [645, 160, 675, 190]
+	      MinAlgLoopOccurrences   off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      MaskType		      "Repeating table"
+	      MaskDescription	      "Output a repeating sequence of numbers specified in a table of time-value pairs. Values of time should be monotonically increasing."
+	      MaskHelp		      "Repeats cycle given in table. Time values should be monotonically increasing."
+	      MaskPromptString	      "Time values:|Output values:"
+	      MaskStyleString	      "edit,edit"
+	      MaskTunableValueString  "on,on"
+	      MaskCallbackString      "|"
+	      MaskEnableString	      "on,on"
+	      MaskVisibilityString    "on,on"
+	      MaskToolTipString	      "on,on"
+	      MaskVarAliasString      ","
+	      MaskVariables	      "rep_seq_t=@1;rep_seq_y=@2;"
+	      MaskInitialization      "if (length(rep_seq_t) ~= length(rep_seq_y)),\n  error('Length of time vector and output vector must be the same.')\nend\ndbl_rep_seq_t = double(rep_seq_t);\ndbl_rep_seq_y = double(rep_seq_y);\nperiod = max(dbl_rep_seq_t) - min(dbl_rep_seq_t);\ns = round(length(dbl_rep_seq_t)/50);\nif s > 0\n  pts = [1:s:length(dbl_rep_seq_t)];\n  L   = length(pts);\nelse\n  L   = length(dbl_rep_seq_t);\n  pts = [1:L];\nend\n\ndisp_seq_t = reshape(dbl_rep_seq_t(pts),L,1);\ndisp_seq_y = reshape(dbl_rep_seq_y(pts),L,1);\ndisp_period = max(disp_seq_t) - min(disp_seq_t);\n\ndisp_seq_t  = repmat(disp_seq_t,1,3) + (ones(L,1)*(disp_period*[0,1,2]));\ndisp_seq_t = [ disp_seq_t(:); disp_seq_t(end) ];\ndisp_seq_y = repmat(disp_seq_y,1,3);\ndisp_seq_y = [ disp_seq_y(:); disp_seq_y(1) ];\n"
+	      MaskDisplay	      "plot( disp_seq_t, disp_seq_y )"
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      on
+	      MaskIconRotate	      "none"
+	      MaskIconUnits	      "autoscale"
+	      MaskValueString	      "[0 T]|[X0 X0]"
+	      MaskCapabilities	      "slmaskedcaps(gcbh)"
+	      MaskTabNameString	      ","
+	      System {
+		Name			"Repeating\nSequence"
+		Location		[35, 547, 506, 678]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Clock
+		  Name			  "Clock"
+		  Position		  [15, 30, 35, 50]
+		  ShowName		  off
+		  Decimation		  "10"
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "Fcn1"
+		  Position		  [200, 46, 290, 64]
+		  Expr			  "rem(u[1],period)"
+		}
+		Block {
+		  BlockType		  Lookup
+		  Name			  "Look-Up Table1"
+		  Position		  [330, 43, 370, 67]
+		  InputValues		  "rep_seq_t - min(rep_seq_t)"
+		  Table			  "rep_seq_y"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  SignalConversion
+		  Name			  "Output"
+		  Position		  [450, 31, 470, 79]
+		  ConversionOutput	  "Contiguous copy"
+		}
+		Block {
+		  BlockType		  Sum
+		  Name			  "Sum"
+		  Ports			  [2, 1]
+		  Position		  [145, 29, 165, 76]
+		  ShowName		  off
+		  Inputs		  "+-"
+		  CollapseMode		  "All dimensions"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  "S-Function"
+		  Name			  "startTime"
+		  Ports			  [0, 1]
+		  Position		  [50, 52, 120, 78]
+		  FunctionName		  "sfun_tstart"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "Out1"
+		  Position		  [550, 45, 570, 65]
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Line {
+		  SrcBlock		  "Output"
+		  SrcPort		  1
+		  DstBlock		  "Out1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Look-Up Table1"
+		  SrcPort		  1
+		  DstBlock		  "Output"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "startTime"
+		  SrcPort		  1
+		  DstBlock		  "Sum"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Clock"
+		  SrcPort		  1
+		  DstBlock		  "Sum"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Sum"
+		  SrcPort		  1
+		  DstBlock		  "Fcn1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Fcn1"
+		  SrcPort		  1
+		  DstBlock		  "Look-Up Table1"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Out1"
+	      Position		      [705, 168, 735, 182]
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Line {
+	      SrcBlock		      "Repeating\nSequence"
+	      SrcPort		      1
+	      DstBlock		      "Out1"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Generate \nconstant\nfor partition1 variant2 1"
+	  Ports			  [0, 1]
+	  Position		  [20, 106, 120, 144]
+	  MinAlgLoopOccurrences	  off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  MaskType		  "Feature generation"
+	  MaskDescription	  "Output a decreasing ramp signal limited from bottom and top, starting at the specified time."
+	  MaskPromptString	  "Constant value:|Duration"
+	  MaskStyleString	  "edit,edit"
+	  MaskTunableValueString  "on,on"
+	  MaskCallbackString	  "|"
+	  MaskEnableString	  "on,on"
+	  MaskVisibilityString	  "on,on"
+	  MaskToolTipString	  "on,on"
+	  MaskVarAliasString	  ","
+	  MaskVariables		  "X0=@1;T=@2;"
+	  MaskDisplay		  "plot([1:2],[4,4])\n"
+	  MaskSelfModifiable	  on
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "70|2"
+	  MaskTabNameString	  ","
+	  System {
+	    Name		    "Generate \nconstant\nfor partition1 variant2 1"
+	    Location		    [2, 82, 1270, 776]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Repeating\nSequence"
+	      Ports		      [0, 1]
+	      Position		      [645, 160, 675, 190]
+	      MinAlgLoopOccurrences   off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      MaskType		      "Repeating table"
+	      MaskDescription	      "Output a repeating sequence of numbers specified in a table of time-value pairs. Values of time should be monotonically increasing."
+	      MaskHelp		      "Repeats cycle given in table. Time values should be monotonically increasing."
+	      MaskPromptString	      "Time values:|Output values:"
+	      MaskStyleString	      "edit,edit"
+	      MaskTunableValueString  "on,on"
+	      MaskCallbackString      "|"
+	      MaskEnableString	      "on,on"
+	      MaskVisibilityString    "on,on"
+	      MaskToolTipString	      "on,on"
+	      MaskVarAliasString      ","
+	      MaskVariables	      "rep_seq_t=@1;rep_seq_y=@2;"
+	      MaskInitialization      "if (length(rep_seq_t) ~= length(rep_seq_y)),\n  error('Length of time vector and output vector must be the same.')\nend\ndbl_rep_seq_t = double(rep_seq_t);\ndbl_rep_seq_y = double(rep_seq_y);\nperiod = max(dbl_rep_seq_t) - min(dbl_rep_seq_t);\ns = round(length(dbl_rep_seq_t)/50);\nif s > 0\n  pts = [1:s:length(dbl_rep_seq_t)];\n  L   = length(pts);\nelse\n  L   = length(dbl_rep_seq_t);\n  pts = [1:L];\nend\n\ndisp_seq_t = reshape(dbl_rep_seq_t(pts),L,1);\ndisp_seq_y = reshape(dbl_rep_seq_y(pts),L,1);\ndisp_period = max(disp_seq_t) - min(disp_seq_t);\n\ndisp_seq_t  = repmat(disp_seq_t,1,3) + (ones(L,1)*(disp_period*[0,1,2]));\ndisp_seq_t = [ disp_seq_t(:); disp_seq_t(end) ];\ndisp_seq_y = repmat(disp_seq_y,1,3);\ndisp_seq_y = [ disp_seq_y(:); disp_seq_y(1) ];\n"
+	      MaskDisplay	      "plot( disp_seq_t, disp_seq_y )"
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      on
+	      MaskIconRotate	      "none"
+	      MaskIconUnits	      "autoscale"
+	      MaskValueString	      "[0 T]|[X0 X0]"
+	      MaskCapabilities	      "slmaskedcaps(gcbh)"
+	      MaskTabNameString	      ","
+	      System {
+		Name			"Repeating\nSequence"
+		Location		[35, 547, 506, 678]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Clock
+		  Name			  "Clock"
+		  Position		  [15, 30, 35, 50]
+		  ShowName		  off
+		  Decimation		  "10"
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "Fcn1"
+		  Position		  [200, 46, 290, 64]
+		  Expr			  "rem(u[1],period)"
+		}
+		Block {
+		  BlockType		  Lookup
+		  Name			  "Look-Up Table1"
+		  Position		  [330, 43, 370, 67]
+		  InputValues		  "rep_seq_t - min(rep_seq_t)"
+		  Table			  "rep_seq_y"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  SignalConversion
+		  Name			  "Output"
+		  Position		  [450, 31, 470, 79]
+		  ConversionOutput	  "Contiguous copy"
+		}
+		Block {
+		  BlockType		  Sum
+		  Name			  "Sum"
+		  Ports			  [2, 1]
+		  Position		  [145, 29, 165, 76]
+		  ShowName		  off
+		  Inputs		  "+-"
+		  CollapseMode		  "All dimensions"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  "S-Function"
+		  Name			  "startTime"
+		  Ports			  [0, 1]
+		  Position		  [50, 52, 120, 78]
+		  FunctionName		  "sfun_tstart"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "Out1"
+		  Position		  [550, 45, 570, 65]
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Line {
+		  SrcBlock		  "Output"
+		  SrcPort		  1
+		  DstBlock		  "Out1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Look-Up Table1"
+		  SrcPort		  1
+		  DstBlock		  "Output"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "startTime"
+		  SrcPort		  1
+		  DstBlock		  "Sum"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Clock"
+		  SrcPort		  1
+		  DstBlock		  "Sum"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Sum"
+		  SrcPort		  1
+		  DstBlock		  "Fcn1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Fcn1"
+		  SrcPort		  1
+		  DstBlock		  "Look-Up Table1"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Out1"
+	      Position		      [705, 168, 735, 182]
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Line {
+	      SrcBlock		      "Repeating\nSequence"
+	      SrcPort		      1
+	      DstBlock		      "Out1"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Generate \nconstant\nfor partition1 variant3 1"
+	  Ports			  [0, 1]
+	  Position		  [145, 151, 245, 189]
+	  MinAlgLoopOccurrences	  off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  MaskType		  "Feature generation"
+	  MaskDescription	  "Output a decreasing ramp signal limited from bottom and top, starting at the specified time."
+	  MaskPromptString	  "Constant value:|Duration"
+	  MaskStyleString	  "edit,edit"
+	  MaskTunableValueString  "on,on"
+	  MaskCallbackString	  "|"
+	  MaskEnableString	  "on,on"
+	  MaskVisibilityString	  "on,on"
+	  MaskToolTipString	  "on,on"
+	  MaskVarAliasString	  ","
+	  MaskVariables		  "X0=@1;T=@2;"
+	  MaskDisplay		  "plot([1:2],[4,4])\n"
+	  MaskSelfModifiable	  on
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "0|20"
+	  MaskTabNameString	  ","
+	  System {
+	    Name		    "Generate \nconstant\nfor partition1 variant3 1"
+	    Location		    [2, 82, 1270, 776]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Repeating\nSequence"
+	      Ports		      [0, 1]
+	      Position		      [645, 160, 675, 190]
+	      MinAlgLoopOccurrences   off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      MaskType		      "Repeating table"
+	      MaskDescription	      "Output a repeating sequence of numbers specified in a table of time-value pairs. Values of time should be monotonically increasing."
+	      MaskHelp		      "Repeats cycle given in table. Time values should be monotonically increasing."
+	      MaskPromptString	      "Time values:|Output values:"
+	      MaskStyleString	      "edit,edit"
+	      MaskTunableValueString  "on,on"
+	      MaskCallbackString      "|"
+	      MaskEnableString	      "on,on"
+	      MaskVisibilityString    "on,on"
+	      MaskToolTipString	      "on,on"
+	      MaskVarAliasString      ","
+	      MaskVariables	      "rep_seq_t=@1;rep_seq_y=@2;"
+	      MaskInitialization      "if (length(rep_seq_t) ~= length(rep_seq_y)),\n  error('Length of time vector and output vector must be the same.')\nend\ndbl_rep_seq_t = double(rep_seq_t);\ndbl_rep_seq_y = double(rep_seq_y);\nperiod = max(dbl_rep_seq_t) - min(dbl_rep_seq_t);\ns = round(length(dbl_rep_seq_t)/50);\nif s > 0\n  pts = [1:s:length(dbl_rep_seq_t)];\n  L   = length(pts);\nelse\n  L   = length(dbl_rep_seq_t);\n  pts = [1:L];\nend\n\ndisp_seq_t = reshape(dbl_rep_seq_t(pts),L,1);\ndisp_seq_y = reshape(dbl_rep_seq_y(pts),L,1);\ndisp_period = max(disp_seq_t) - min(disp_seq_t);\n\ndisp_seq_t  = repmat(disp_seq_t,1,3) + (ones(L,1)*(disp_period*[0,1,2]));\ndisp_seq_t = [ disp_seq_t(:); disp_seq_t(end) ];\ndisp_seq_y = repmat(disp_seq_y,1,3);\ndisp_seq_y = [ disp_seq_y(:); disp_seq_y(1) ];\n"
+	      MaskDisplay	      "plot( disp_seq_t, disp_seq_y )"
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      on
+	      MaskIconRotate	      "none"
+	      MaskIconUnits	      "autoscale"
+	      MaskValueString	      "[0 T]|[X0 X0]"
+	      MaskCapabilities	      "slmaskedcaps(gcbh)"
+	      MaskTabNameString	      ","
+	      System {
+		Name			"Repeating\nSequence"
+		Location		[35, 547, 506, 678]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Clock
+		  Name			  "Clock"
+		  Position		  [15, 30, 35, 50]
+		  ShowName		  off
+		  Decimation		  "10"
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "Fcn1"
+		  Position		  [200, 46, 290, 64]
+		  Expr			  "rem(u[1],period)"
+		}
+		Block {
+		  BlockType		  Lookup
+		  Name			  "Look-Up Table1"
+		  Position		  [330, 43, 370, 67]
+		  InputValues		  "rep_seq_t - min(rep_seq_t)"
+		  Table			  "rep_seq_y"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  SignalConversion
+		  Name			  "Output"
+		  Position		  [450, 31, 470, 79]
+		  ConversionOutput	  "Contiguous copy"
+		}
+		Block {
+		  BlockType		  Sum
+		  Name			  "Sum"
+		  Ports			  [2, 1]
+		  Position		  [145, 29, 165, 76]
+		  ShowName		  off
+		  Inputs		  "+-"
+		  CollapseMode		  "All dimensions"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  "S-Function"
+		  Name			  "startTime"
+		  Ports			  [0, 1]
+		  Position		  [50, 52, 120, 78]
+		  FunctionName		  "sfun_tstart"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "Out1"
+		  Position		  [550, 45, 570, 65]
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Line {
+		  SrcBlock		  "Output"
+		  SrcPort		  1
+		  DstBlock		  "Out1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Look-Up Table1"
+		  SrcPort		  1
+		  DstBlock		  "Output"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "startTime"
+		  SrcPort		  1
+		  DstBlock		  "Sum"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Clock"
+		  SrcPort		  1
+		  DstBlock		  "Sum"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Sum"
+		  SrcPort		  1
+		  DstBlock		  "Fcn1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Fcn1"
+		  SrcPort		  1
+		  DstBlock		  "Look-Up Table1"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Out1"
+	      Position		      [705, 168, 735, 182]
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Line {
+	      SrcBlock		      "Repeating\nSequence"
+	      SrcPort		      1
+	      DstBlock		      "Out1"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "TestDataVariants Sequence"
+	  Ports			  [0, 1]
+	  Position		  [220, 209, 320, 251]
+	  MinAlgLoopOccurrences	  off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  System {
+	    Name		    "TestDataVariants Sequence"
+	    Location		    [760, 318, 1258, 618]
+	    Open		    on
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Compare\nTo Zero"
+	      Ports		      [1, 1]
+	      Position		      [200, 155, 230, 185]
+	      SourceBlock	      "simulink/Logic and Bit\nOperations/Compare\nTo Zero"
+	      SourceType	      "Compare To Zero"
+	      ShowPortLabels	      "FromPortIcon"
+	      SystemSampleTime	      "-1"
+	      FunctionWithSeparateData off
+	      RTWMemSecFuncInitTerm   "Inherit from model"
+	      RTWMemSecFuncExecute    "Inherit from model"
+	      RTWMemSecDataConstants  "Inherit from model"
+	      RTWMemSecDataInternal   "Inherit from model"
+	      RTWMemSecDataParameters "Inherit from model"
+	      relop		      "=="
+	      LogicOutDataTypeMode    "uint8"
+	      ZeroCross		      off
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant"
+	      Position		      [110, 215, 140, 245]
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      From
+	      Name		      "From"
+	      Position		      [110, 116, 150, 144]
+	      CloseFcn		      "tagdialog Close"
+	      GotoTag		      "A"
+	      TagVisibility	      "global"
+	    }
+	    Block {
+	      BlockType		      Goto
+	      Name		      "Goto"
+	      Position		      [305, 85, 345, 115]
+	      GotoTag		      "B"
+	      TagVisibility	      "global"
+	    }
+	    Block {
+	      BlockType		      Scope
+	      Name		      "Scope"
+	      Ports		      [1]
+	      Position		      [410, 144, 440, 176]
+	      Floating		      off
+	      Location		      [1, 45, 1601, 1169]
+	      Open		      off
+	      NumInputPorts	      "1"
+	      ZoomMode		      "yonly"
+	      List {
+		ListType		AxesTitles
+		axes1			"%<SignalLabel>"
+	      }
+	      SaveName		      "ScopeData2"
+	      DataFormat	      "StructureWithTime"
+	      SampleTime	      "0"
+	    }
+	    Block {
+	      BlockType		      Switch
+	      Name		      "Switch"
+	      Position		      [300, 205, 330, 235]
+	      Criteria		      "u2 ~= 0"
+	      Threshold		      "1"
+	      InputSameDT	      off
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "variant dependent \nTest Control"
+	      Ports		      [0, 2]
+	      Position		      [235, 20, 355, 55]
+	      Orientation	      "left"
+	      AncestorBlock	      "MIL_Test/Test Control/Test Control Architecture/variant dependent \nTest Control/variant dependent \nTest Control"
+	      PermitHierarchicalResolution "ExplicitOnly"
+	      MinAlgLoopOccurrences   off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      MaskType		      "Stateflow"
+	      MaskDescription	      "Stateflow diagram"
+	      MaskDisplay	      "plot(sf('Private','sfblk','xIcon'),sf('Private','sfblk','yIcon'));text(0.5,0,sf('Private', 'sfblk', 'tIcon'),'HorizontalAl','Center','VerticalAl','Bottom');"
+	      MaskSelfModifiable      on
+	      MaskIconFrame	      off
+	      MaskIconOpaque	      off
+	      MaskIconRotate	      "none"
+	      MaskIconUnits	      "autoscale"
+	      System {
+		Name			"variant dependent \nTest Control"
+		Location		[257, 457, 812, 717]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Demux
+		  Name			  " Demux "
+		  Ports			  [1, 1]
+		  Position		  [270, 180, 320, 220]
+		  Outputs		  "1"
+		}
+		Block {
+		  BlockType		  Ground
+		  Name			  " Ground "
+		  Position		  [20, 131, 40, 149]
+		}
+		Block {
+		  BlockType		  "S-Function"
+		  Name			  " SFunction "
+		  Tag			  "Stateflow S-Function one_factor 1"
+		  Ports			  [1, 3]
+		  Position		  [180, 100, 230, 180]
+		  FunctionName		  "sf_sfun"
+		  PortCounts		  "[1 3]"
+		  Port {
+		    PortNumber		    2
+		    Name		    "TestCase"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    3
+		    Name		    "variant"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		}
+		Block {
+		  BlockType		  Terminator
+		  Name			  " Terminator "
+		  Position		  [460, 191, 480, 209]
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "TestCase"
+		  Position		  [460, 101, 480, 119]
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "variant"
+		  Position		  [460, 136, 480, 154]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Line {
+		  SrcBlock		  " SFunction "
+		  SrcPort		  1
+		  Points		  [0, 85]
+		  DstBlock		  " Demux "
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  " Ground "
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  " Demux "
+		  SrcPort		  1
+		  DstBlock		  " Terminator "
+		  DstPort		  1
+		}
+		Line {
+		  Name			  "TestCase"
+		  Labels		  [0, 0]
+		  SrcBlock		  " SFunction "
+		  SrcPort		  2
+		  DstBlock		  "TestCase"
+		  DstPort		  1
+		}
+		Line {
+		  Name			  "variant"
+		  Labels		  [0, 0]
+		  SrcBlock		  " SFunction "
+		  SrcPort		  3
+		  DstBlock		  "variant"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Out1"
+	      Position		      [395, 213, 425, 227]
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Line {
+	      SrcBlock		      "Constant"
+	      SrcPort		      1
+	      DstBlock		      "Switch"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "Switch"
+	      SrcPort		      1
+	      DstBlock		      "Out1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "variant dependent \nTest Control"
+	      SrcPort		      1
+	      Points		      [-15, 0; 0, 80; 70, 0]
+	      DstBlock		      "Switch"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "From"
+	      SrcPort		      1
+	      Points		      [15, 0; 0, 10]
+	      Branch {
+		Points			[0, 30]
+		DstBlock		"Compare\nTo Zero"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 20]
+		DstBlock		"Scope"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Compare\nTo Zero"
+	      SrcPort		      1
+	      Points		      [25, 0; 0, 50]
+	      DstBlock		      "Switch"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "variant dependent \nTest Control"
+	      SrcPort		      2
+	      Points		      [-10, 0; 0, 55]
+	      DstBlock		      "Goto"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  MultiPortSwitch
+	  Name			  "switch"
+	  Ports			  [4, 1]
+	  Position		  [290, 92, 320, 138]
+	  Inputs		  "3"
+	  InputSameDT		  off
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "v_Fzg"
+	  Position		  [360, 103, 390, 117]
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Line {
+	  SrcBlock		  "switch"
+	  SrcPort		  1
+	  Points		  [10, 0; 0, -5]
+	  DstBlock		  "v_Fzg"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Generate \nconstant\nfor partition1 variant2 1"
+	  SrcPort		  1
+	  Points		  [110, 0; 0, -5]
+	  DstBlock		  "switch"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Generate \nconstant\nfor partition1 variant1 1"
+	  SrcPort		  1
+	  Points		  [75, 0; 0, 70]
+	  DstBlock		  "switch"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Generate \nconstant\nfor partition1 variant3 1"
+	  SrcPort		  1
+	  Points		  [20, 0; 0, -40]
+	  DstBlock		  "switch"
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "TestDataVariants Sequence"
+	  SrcPort		  1
+	  Points		  [0, -85; 15, 0; 0, -45]
+	  DstBlock		  "switch"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Generate decrease 6"
+      Ports		      [0, 1]
+      Position		      [125, 97, 160, 133]
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Port {
+	PortNumber		1
+	TestPoint		on
+	RTWStorageClass		"Auto"
+	DataLogging		on
+	DataLoggingNameMode	"Custom"
+	DataLoggingName		"phi_Acc"
+      }
+      System {
+	Name			"Generate decrease 6"
+	Location		[6, 82, 1274, 1000]
+	Open			on
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Generate \nlimited decrease\nfor partition1 variant1 1"
+	  Ports			  [0, 1]
+	  Position		  [60, 36, 160, 74]
+	  MinAlgLoopOccurrences	  off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  MaskType		  "Feature generation"
+	  MaskDescription	  "Output a decreasing ramp signal limited from bottom and top, starting at the specified time."
+	  MaskPromptString	  "Initial output:|Final output:|Duration"
+	  MaskStyleString	  "edit,edit,edit"
+	  MaskTunableValueString  "on,on,on"
+	  MaskCallbackString	  "||"
+	  MaskEnableString	  "on,on,on"
+	  MaskVisibilityString	  "on,on,on"
+	  MaskToolTipString	  "on,on,on"
+	  MaskVarAliasString	  ",,"
+	  MaskVariables		  "X0=@1;XF=@2;T=@3;"
+	  MaskDisplay		  "plot([1:10],[4,4,4,4,4,1,1,1,1,1])\nplot([1:10],[4,4,4,1,1,1,1,1,1,1])\nplot([1:10],[4,1,1,1,1,1,1,1,1,1])\nplot([1:10],[4,4,4,4,4,1,1,1,1,1])\nplot([1:10],[4,4,4,4,4,4,4,1,1,1])\nplot([1:10],[4,4,4,4,4,4,4,4,4,1])\nplot([1:10],[4,4,4,4,4,4,4,4,4,4])\ncolor('white');\nplot([1:10],[1,1,1,1,1,1,1,1,1,1])\ncolor('black');\nplot([1,1.5],[1,1])\nplot([2.5,3.5],[1,1])\nplot([4.5,5.5],[1,1])\nplot([6.5,7.5],[1,1])\nplot([8.5,9.5],[1,1])\ncolor('white');\nplot([1,1.5],[4,4])\nplot([2.5,3.5],[4,4])\nplot([4.5,5.5],[4,4])\nplot([6.5,7.5],[4,4])\nplot([8.5,9.5],[4,4])\n\n"
+	  MaskSelfModifiable	  on
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "28|2|2"
+	  MaskTabNameString	  ",,"
+	  System {
+	    Name		    "Generate \nlimited decrease\nfor partition1 variant1 1"
+	    Location		    [2, 82, 1270, 776]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Repeating\nSequence"
+	      Ports		      [0, 1]
+	      Position		      [645, 160, 675, 190]
+	      MinAlgLoopOccurrences   off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      MaskType		      "Repeating table"
+	      MaskDescription	      "Output a repeating sequence of numbers specified in a table of time-value pairs. Values of time should be monotonically increasing."
+	      MaskHelp		      "Repeats cycle given in table. Time values should be monotonically increasing."
+	      MaskPromptString	      "Time values:|Output values:"
+	      MaskStyleString	      "edit,edit"
+	      MaskTunableValueString  "on,on"
+	      MaskCallbackString      "|"
+	      MaskEnableString	      "on,on"
+	      MaskVisibilityString    "on,on"
+	      MaskToolTipString	      "on,on"
+	      MaskVarAliasString      ","
+	      MaskVariables	      "rep_seq_t=@1;rep_seq_y=@2;"
+	      MaskInitialization      "if (length(rep_seq_t) ~= length(rep_seq_y)),\n  error('Length of time vector and output vector must be the same.')\nend\ndbl_rep_seq_t = double(rep_seq_t);\ndbl_rep_seq_y = double(rep_seq_y);\nperiod = max(dbl_rep_seq_t) - min(dbl_rep_seq_t);\ns = round(length(dbl_rep_seq_t)/50);\nif s > 0\n  pts = [1:s:length(dbl_rep_seq_t)];\n  L   = length(pts);\nelse\n  L   = length(dbl_rep_seq_t);\n  pts = [1:L];\nend\n\ndisp_seq_t = reshape(dbl_rep_seq_t(pts),L,1);\ndisp_seq_y = reshape(dbl_rep_seq_y(pts),L,1);\ndisp_period = max(disp_seq_t) - min(disp_seq_t);\n\ndisp_seq_t  = repmat(disp_seq_t,1,3) + (ones(L,1)*(disp_period*[0,1,2]));\ndisp_seq_t = [ disp_seq_t(:); disp_seq_t(end) ];\ndisp_seq_y = repmat(disp_seq_y,1,3);\ndisp_seq_y = [ disp_seq_y(:); disp_seq_y(1) ];\n"
+	      MaskDisplay	      "plot( disp_seq_t, disp_seq_y )"
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      on
+	      MaskIconRotate	      "none"
+	      MaskIconUnits	      "autoscale"
+	      MaskValueString	      "[0 T]|[X0 XF]"
+	      MaskCapabilities	      "slmaskedcaps(gcbh)"
+	      MaskTabNameString	      ","
+	      System {
+		Name			"Repeating\nSequence"
+		Location		[35, 547, 506, 678]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Clock
+		  Name			  "Clock"
+		  Position		  [15, 30, 35, 50]
+		  ShowName		  off
+		  Decimation		  "10"
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "Fcn1"
+		  Position		  [200, 46, 290, 64]
+		  Expr			  "rem(u[1],period)"
+		}
+		Block {
+		  BlockType		  Lookup
+		  Name			  "Look-Up Table1"
+		  Position		  [330, 43, 370, 67]
+		  InputValues		  "rep_seq_t - min(rep_seq_t)"
+		  Table			  "rep_seq_y"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  SignalConversion
+		  Name			  "Output"
+		  Position		  [450, 31, 470, 79]
+		  ConversionOutput	  "Contiguous copy"
+		}
+		Block {
+		  BlockType		  Sum
+		  Name			  "Sum"
+		  Ports			  [2, 1]
+		  Position		  [145, 29, 165, 76]
+		  ShowName		  off
+		  Inputs		  "+-"
+		  CollapseMode		  "All dimensions"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  "S-Function"
+		  Name			  "startTime"
+		  Ports			  [0, 1]
+		  Position		  [50, 52, 120, 78]
+		  FunctionName		  "sfun_tstart"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "Out1"
+		  Position		  [550, 45, 570, 65]
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Line {
+		  SrcBlock		  "Fcn1"
+		  SrcPort		  1
+		  DstBlock		  "Look-Up Table1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Sum"
+		  SrcPort		  1
+		  DstBlock		  "Fcn1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Clock"
+		  SrcPort		  1
+		  DstBlock		  "Sum"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "startTime"
+		  SrcPort		  1
+		  DstBlock		  "Sum"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Look-Up Table1"
+		  SrcPort		  1
+		  DstBlock		  "Output"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Output"
+		  SrcPort		  1
+		  DstBlock		  "Out1"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Out1"
+	      Position		      [705, 168, 735, 182]
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Line {
+	      SrcBlock		      "Repeating\nSequence"
+	      SrcPort		      1
+	      DstBlock		      "Out1"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Generate \nlimited decrease\nfor partition1 variant2 1"
+	  Ports			  [0, 1]
+	  Position		  [55, 131, 155, 169]
+	  MinAlgLoopOccurrences	  off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  MaskType		  "Feature generation"
+	  MaskDescription	  "Output a decreasing ramp signal limited from bottom and top, starting at the specified time."
+	  MaskPromptString	  "Initial output:|Final output:|Duration"
+	  MaskStyleString	  "edit,edit,edit"
+	  MaskTunableValueString  "on,on,on"
+	  MaskCallbackString	  "||"
+	  MaskEnableString	  "on,on,on"
+	  MaskVisibilityString	  "on,on,on"
+	  MaskToolTipString	  "on,on,on"
+	  MaskVarAliasString	  ",,"
+	  MaskVariables		  "X0=@1;XF=@2;T=@3;"
+	  MaskDisplay		  "plot([1:10],[4,4,4,4,4,1,1,1,1,1])\nplot([1:10],[4,4,4,1,1,1,1,1,1,1])\nplot([1:10],[4,1,1,1,1,1,1,1,1,1])\nplot([1:10],[4,4,4,4,4,1,1,1,1,1])\nplot([1:10],[4,4,4,4,4,4,4,1,1,1])\nplot([1:10],[4,4,4,4,4,4,4,4,4,1])\nplot([1:10],[4,4,4,4,4,4,4,4,4,4])\ncolor('white');\nplot([1:10],[1,1,1,1,1,1,1,1,1,1])\ncolor('black');\nplot([1,1.5],[1,1])\nplot([2.5,3.5],[1,1])\nplot([4.5,5.5],[1,1])\nplot([6.5,7.5],[1,1])\nplot([8.5,9.5],[1,1])\ncolor('white');\nplot([1,1.5],[4,4])\nplot([2.5,3.5],[4,4])\nplot([4.5,5.5],[4,4])\nplot([6.5,7.5],[4,4])\nplot([8.5,9.5],[4,4])\n\n"
+	  MaskSelfModifiable	  on
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "100|92|2"
+	  MaskTabNameString	  ",,"
+	  System {
+	    Name		    "Generate \nlimited decrease\nfor partition1 variant2 1"
+	    Location		    [2, 82, 1270, 776]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Repeating\nSequence"
+	      Ports		      [0, 1]
+	      Position		      [645, 160, 675, 190]
+	      MinAlgLoopOccurrences   off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      MaskType		      "Repeating table"
+	      MaskDescription	      "Output a repeating sequence of numbers specified in a table of time-value pairs. Values of time should be monotonically increasing."
+	      MaskHelp		      "Repeats cycle given in table. Time values should be monotonically increasing."
+	      MaskPromptString	      "Time values:|Output values:"
+	      MaskStyleString	      "edit,edit"
+	      MaskTunableValueString  "on,on"
+	      MaskCallbackString      "|"
+	      MaskEnableString	      "on,on"
+	      MaskVisibilityString    "on,on"
+	      MaskToolTipString	      "on,on"
+	      MaskVarAliasString      ","
+	      MaskVariables	      "rep_seq_t=@1;rep_seq_y=@2;"
+	      MaskInitialization      "if (length(rep_seq_t) ~= length(rep_seq_y)),\n  error('Length of time vector and output vector must be the same.')\nend\ndbl_rep_seq_t = double(rep_seq_t);\ndbl_rep_seq_y = double(rep_seq_y);\nperiod = max(dbl_rep_seq_t) - min(dbl_rep_seq_t);\ns = round(length(dbl_rep_seq_t)/50);\nif s > 0\n  pts = [1:s:length(dbl_rep_seq_t)];\n  L   = length(pts);\nelse\n  L   = length(dbl_rep_seq_t);\n  pts = [1:L];\nend\n\ndisp_seq_t = reshape(dbl_rep_seq_t(pts),L,1);\ndisp_seq_y = reshape(dbl_rep_seq_y(pts),L,1);\ndisp_period = max(disp_seq_t) - min(disp_seq_t);\n\ndisp_seq_t  = repmat(disp_seq_t,1,3) + (ones(L,1)*(disp_period*[0,1,2]));\ndisp_seq_t = [ disp_seq_t(:); disp_seq_t(end) ];\ndisp_seq_y = repmat(disp_seq_y,1,3);\ndisp_seq_y = [ disp_seq_y(:); disp_seq_y(1) ];\n"
+	      MaskDisplay	      "plot( disp_seq_t, disp_seq_y )"
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      on
+	      MaskIconRotate	      "none"
+	      MaskIconUnits	      "autoscale"
+	      MaskValueString	      "[0 T]|[X0 XF]"
+	      MaskCapabilities	      "slmaskedcaps(gcbh)"
+	      MaskTabNameString	      ","
+	      System {
+		Name			"Repeating\nSequence"
+		Location		[35, 547, 506, 678]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Clock
+		  Name			  "Clock"
+		  Position		  [15, 30, 35, 50]
+		  ShowName		  off
+		  Decimation		  "10"
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "Fcn1"
+		  Position		  [200, 46, 290, 64]
+		  Expr			  "rem(u[1],period)"
+		}
+		Block {
+		  BlockType		  Lookup
+		  Name			  "Look-Up Table1"
+		  Position		  [330, 43, 370, 67]
+		  InputValues		  "rep_seq_t - min(rep_seq_t)"
+		  Table			  "rep_seq_y"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  SignalConversion
+		  Name			  "Output"
+		  Position		  [450, 31, 470, 79]
+		  ConversionOutput	  "Contiguous copy"
+		}
+		Block {
+		  BlockType		  Sum
+		  Name			  "Sum"
+		  Ports			  [2, 1]
+		  Position		  [145, 29, 165, 76]
+		  ShowName		  off
+		  Inputs		  "+-"
+		  CollapseMode		  "All dimensions"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  "S-Function"
+		  Name			  "startTime"
+		  Ports			  [0, 1]
+		  Position		  [50, 52, 120, 78]
+		  FunctionName		  "sfun_tstart"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "Out1"
+		  Position		  [550, 45, 570, 65]
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Line {
+		  SrcBlock		  "Fcn1"
+		  SrcPort		  1
+		  DstBlock		  "Look-Up Table1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Sum"
+		  SrcPort		  1
+		  DstBlock		  "Fcn1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Clock"
+		  SrcPort		  1
+		  DstBlock		  "Sum"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "startTime"
+		  SrcPort		  1
+		  DstBlock		  "Sum"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Look-Up Table1"
+		  SrcPort		  1
+		  DstBlock		  "Output"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Output"
+		  SrcPort		  1
+		  DstBlock		  "Out1"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Out1"
+	      Position		      [705, 168, 735, 182]
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Line {
+	      SrcBlock		      "Repeating\nSequence"
+	      SrcPort		      1
+	      DstBlock		      "Out1"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "TestDataVariants Sequence"
+	  Ports			  [0, 1]
+	  Position		  [220, 214, 320, 256]
+	  MinAlgLoopOccurrences	  off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  System {
+	    Name		    "TestDataVariants Sequence"
+	    Location		    [185, 321, 899, 700]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Compare\nTo Constant"
+	      Ports		      [1, 1]
+	      Position		      [205, 130, 235, 160]
+	      SourceBlock	      "simulink/Logic and Bit\nOperations/Compare\nTo Constant"
+	      SourceType	      "Compare To Constant"
+	      ShowPortLabels	      "FromPortIcon"
+	      SystemSampleTime	      "-1"
+	      FunctionWithSeparateData "off"
+	      RTWMemSecFuncInitTerm   "Inherit from model"
+	      RTWMemSecFuncExecute    "Inherit from model"
+	      RTWMemSecDataConstants  "Inherit from model"
+	      RTWMemSecDataInternal   "Inherit from model"
+	      RTWMemSecDataParameters "Inherit from model"
+	      relop		      ">"
+	      const		      "0"
+	      LogicOutDataTypeMode    "uint8"
+	      ZeroCross		      "off"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant"
+	      Position		      [110, 210, 140, 240]
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      From
+	      Name		      "From"
+	      Position		      [110, 131, 150, 159]
+	      CloseFcn		      "tagdialog Close"
+	      GotoTag		      "B"
+	      TagVisibility	      "global"
+	    }
+	    Block {
+	      BlockType		      Goto
+	      Name		      "Goto"
+	      Position		      [295, 105, 335, 135]
+	      GotoTag		      "A"
+	      TagVisibility	      "global"
+	    }
+	    Block {
+	      BlockType		      Scope
+	      Name		      "Scope"
+	      Ports		      [1]
+	      Position		      [535, 129, 565, 161]
+	      Floating		      off
+	      Location		      [188, 390, 512, 629]
+	      Open		      off
+	      NumInputPorts	      "1"
+	      List {
+		ListType		AxesTitles
+		axes1			"%<SignalLabel>"
+	      }
+	      SaveName		      "ScopeData1"
+	      DataFormat	      "StructureWithTime"
+	      SampleTime	      "0"
+	    }
+	    Block {
+	      BlockType		      Switch
+	      Name		      "Switch"
+	      Position		      [300, 200, 330, 230]
+	      Criteria		      "u2 ~= 0"
+	      Threshold		      "3"
+	      InputSameDT	      off
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "variant dependent \nTest Control"
+	      Ports		      [0, 2]
+	      Position		      [285, 15, 405, 50]
+	      Orientation	      "left"
+	      AncestorBlock	      "MIL_Test/Test Control/Test Control Architecture/variant dependent \nTest Control/variant dependent \nTest Control"
+	      PermitHierarchicalResolution "ExplicitOnly"
+	      MinAlgLoopOccurrences   off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      MaskType		      "Stateflow"
+	      MaskDescription	      "Stateflow diagram"
+	      MaskDisplay	      "plot(sf('Private','sfblk','xIcon'),sf('Private','sfblk','yIcon'));text(0.5,0,sf('Private', 'sfblk', 'tIcon'),'HorizontalAl','Center','VerticalAl','Bottom');"
+	      MaskSelfModifiable      on
+	      MaskIconFrame	      off
+	      MaskIconOpaque	      off
+	      MaskIconRotate	      "none"
+	      MaskIconUnits	      "autoscale"
+	      System {
+		Name			"variant dependent \nTest Control"
+		Location		[257, 457, 812, 717]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Demux
+		  Name			  " Demux "
+		  Ports			  [1, 1]
+		  Position		  [270, 180, 320, 220]
+		  Outputs		  "1"
+		}
+		Block {
+		  BlockType		  Ground
+		  Name			  " Ground "
+		  Position		  [20, 131, 40, 149]
+		}
+		Block {
+		  BlockType		  "S-Function"
+		  Name			  " SFunction "
+		  Tag			  "Stateflow S-Function one_factor 3"
+		  Ports			  [1, 3]
+		  Position		  [180, 100, 230, 180]
+		  FunctionName		  "sf_sfun"
+		  PortCounts		  "[1 3]"
+		  Port {
+		    PortNumber		    2
+		    Name		    "TestCase"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    3
+		    Name		    "variant"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		}
+		Block {
+		  BlockType		  Terminator
+		  Name			  " Terminator "
+		  Position		  [460, 191, 480, 209]
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "TestCase"
+		  Position		  [460, 101, 480, 119]
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "variant"
+		  Position		  [460, 136, 480, 154]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Line {
+		  SrcBlock		  " SFunction "
+		  SrcPort		  1
+		  Points		  [0, 85]
+		  DstBlock		  " Demux "
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  " Ground "
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  " Demux "
+		  SrcPort		  1
+		  DstBlock		  " Terminator "
+		  DstPort		  1
+		}
+		Line {
+		  Name			  "TestCase"
+		  Labels		  [0, 0]
+		  SrcBlock		  " SFunction "
+		  SrcPort		  2
+		  DstBlock		  "TestCase"
+		  DstPort		  1
+		}
+		Line {
+		  Name			  "variant"
+		  Labels		  [0, 0]
+		  SrcBlock		  " SFunction "
+		  SrcPort		  3
+		  DstBlock		  "variant"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Out1"
+	      Position		      [390, 208, 420, 222]
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Line {
+	      SrcBlock		      "Constant"
+	      SrcPort		      1
+	      DstBlock		      "Switch"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "Switch"
+	      SrcPort		      1
+	      DstBlock		      "Out1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "From"
+	      SrcPort		      1
+	      DstBlock		      "Compare\nTo Constant"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "variant dependent \nTest Control"
+	      SrcPort		      2
+	      DstBlock		      "Goto"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "variant dependent \nTest Control"
+	      SrcPort		      1
+	      Points		      [-10, 0; 0, 180]
+	      DstBlock		      "Switch"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Compare\nTo Constant"
+	      SrcPort		      1
+	      Points		      [20, 0; 0, 70]
+	      DstBlock		      "Switch"
+	      DstPort		      2
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  MultiPortSwitch
+	  Name			  "switch"
+	  Ports			  [3, 1]
+	  Position		  [290, 92, 320, 138]
+	  Inputs		  "2"
+	  InputSameDT		  off
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "phi_Acc"
+	  Position		  [360, 103, 390, 117]
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Line {
+	  SrcBlock		  "switch"
+	  SrcPort		  1
+	  Points		  [10, 0; 0, -5]
+	  DstBlock		  "phi_Acc"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "TestDataVariants Sequence"
+	  SrcPort		  1
+	  Points		  [0, -90; 20, 0; 0, -45]
+	  DstBlock		  "switch"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Generate \nlimited decrease\nfor partition1 variant2 1"
+	  SrcPort		  1
+	  Points		  [80, 0; 0, -35]
+	  DstBlock		  "switch"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Generate \nlimited decrease\nfor partition1 variant1 1"
+	  SrcPort		  1
+	  Points		  [105, 0; 0, 75]
+	  DstBlock		  "switch"
+	  DstPort		  3
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Model Info"
+      Ports		      []
+      Position		      [355, 379, 623, 535]
+      ForegroundColor	      "blue"
+      ShowName		      off
+      CopyFcn		      "slcm CopyBlock;"
+      DeleteFcn		      "slcm Cancel;"
+      LoadFcn		      "slcm LoadBlock;"
+      PostSaveFcn	      "slcm('UpdateAllCMBlocksInThisModel')"
+      InitFcn		      "slcm('UpdateAllCMBlocksInThisModelInit')"
+      NameChangeFcn	      "slcm Rename;"
+      OpenFcn		      "slcm"
+      FontName		      "Arial"
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      MaskType		      "CMBlock"
+      MaskDescription	      "This block allows revision control information to be displayed within the model."
+      MaskPromptString	      "InitialSaveTempField|InitialBlockCM|BlockCM|Frame|SaveTempField|DisplayStringWithTags|MaskDisplayString|HorizontalTextAlignment|LeftAlignmentValue|SourceBlockDiagram|TagMaxNumber|CMTag1|CMTag2|CMTag3|CMTag4|CMTag5|CMTag6|CMTag7|CMTag8|CMTag9|CMTag10|CMTag11|CMTag12|CMTag13|CMTag14|CMTag15|CMTag16|CMTag17|CMTag18|CMTag19|CMTag20"
+      MaskStyleString	      "edit,edit,edit,edit,edit,edit,edit,edit,edit,edit,edit,edit,edit,edit,edit,edit,edit,edit,edit,edit,edit,edit,edit,edit,edit,edit,edit,edit,edit,edit,edit"
+      MaskTunableValueString  "on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on"
+      MaskCallbackString      "||||||||||||||||||||||||||||||"
+      MaskEnableString	      "on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on"
+      MaskVisibilityString    "off,off,off,off,off,off,off,off,off,off,off,off,off,off,off,off,off,off,off,off,off,off,off,off,off,off,off,off,off,off,off"
+      MaskToolTipString	      "on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on,on"
+      MaskVarAliasString      ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"
+      MaskVariables	      "InitialSaveTempField=&1;InitialBlockCM=&2;BlockCM=&3;Frame=&4;SaveTempField=&5;DisplayStringWithTags=&6;MaskDisplayString=&7;HorizontalTextAlignment=&8;LeftAlignmentValue=&9;SourceBlockDiagram=&10;TagMaxNumber=@11;CMTag1=&12;CMTag2=&13;CMTag3=&14;CMTag4=&15;CMTag5=&16;CMTag6=&17;CMTag7=&18;CMTag8=&19;CMTag9=&20;CMTag10=&21;CMTag11=&22;CMTag12=&23;CMTag13=&24;CMTag14=&25;CMTag15=&26;CMTag16=&27;CMTag17=&28;CMTag18=&29;CMTag19=&30;CMTag20=&31;"
+      MaskDisplay	      "text(str2num(LeftAlignmentValue), 0.5, MaskDisplayString, 'HorizontalAlignment', HorizontalTextAlignment)\n"
+      MaskSelfModifiable      on
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "normalized"
+      MaskValueString	      "|None|None|on||jza - 14.05.08\n\nThis is a prototypical relaization of the combination strategy - one factor at a time, which is nt implemented in the transformer, but it works here. \n\nFor the TDG unit, test control algorithm would have to be adjusted. \nprobably also sequencing of data would have to be adjusted. |jza - 14.05.08\\n\\nThis is a prototypical relaization of the combination strategy - one factor at a time, which is nt implemented in the transformer, but it works here. \\n\\nFor the TDG unit, test control algorithm would have to be adjusted. \\nprobably also sequencing of data would have to be adjusted. |Center|0.5|one_factor|20||||||||||||||||||||"
+      MaskCapabilities	      "slmaskedcaps(gcbh)"
+      MaskTabNameString	      ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"
+      System {
+	Name			"Model Info"
+	Location		[154, 467, 416, 618]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "EmptySubsystem"
+	  Ports			  []
+	  Position		  [115, 50, 145, 80]
+	  MinAlgLoopOccurrences	  off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  System {
+	    Name		    "EmptySubsystem"
+	    Location		    [146, 180, 902, 673]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	  }
+	}
+      }
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Scope"
+      Ports		      [2]
+      Position		      [320, 76, 350, 109]
+      Floating		      off
+      Location		      [1, 45, 1601, 1169]
+      Open		      off
+      NumInputPorts	      "2"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+	axes2			"%<SignalLabel>"
+      }
+      YMin		      "-5~-5"
+      YMax		      "5~5"
+      DataFormat	      "StructureWithTime"
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "v_Fzg"
+      Position		      [240, 248, 270, 262]
+      IconDisplay	      "Port number"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "phi_Acc"
+      Position		      [245, 133, 275, 147]
+      Port		      "2"
+      IconDisplay	      "Port number"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+    }
+    Line {
+      SrcBlock		      "Generate constant 5"
+      SrcPort		      1
+      Points		      [30, 0; 0, 25; 35, 0]
+      Branch {
+	DstBlock		"v_Fzg"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, -155]
+	DstBlock		"Scope"
+	DstPort			2
+      }
+    }
+    Line {
+      SrcBlock		      "Generate decrease 6"
+      SrcPort		      1
+      Points		      [30, 0; 0, 25; 15, 0]
+      Branch {
+	DstBlock		"phi_Acc"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, -50; 95, 0]
+	DstBlock		"Scope"
+	DstPort			1
+      }
+    }
+  }
+}
+# Finite State Machines
+#
+#    Stateflow Version 6.7 (R2007b) dated Aug  7 2007, 16:48:14
+#
+#
+
+
+Stateflow {
+  machine {
+    id			    1
+    name		    "one_factor"
+    created		    "05-Dec-2007 10:34:06"
+    isLibrary		    0
+    firstData		    32
+    firstTarget		    33
+    debug {
+      disableAllBreakpoints   1
+    }
+    sfVersion		    67014000.000001
+  }
+  chart {
+    id			    2
+    name		    "Generate constant 5/TestDataVariants Sequence/variant dependent \nTest Control"
+    windowPosition	    [226.5 160.5 810.75 475.5]
+    viewLimits		    [32.32 600.14 68.37 393.632]
+    zoomFactor		    0.74
+    screen		    [1 1 1600 1200 1.333333333333333]
+    treeNode		    [0 4 0 0]
+    firstTransition	    8
+    firstJunction	    7
+    viewObj		    2
+    machine		    1
+    subviewS {
+      x1		      32.32
+      y1		      68.37
+      zoomFactor	      0.74
+    }
+    decomposition	    CLUSTER_CHART
+    firstData		    14
+    chartFileNumber	    1
+    disableImplicitCasting  1
+  }
+  state {
+    id			    3
+    labelString		    "TestCase1\nentry: TestCase = 1;"
+    position		    [348.5565 154.6958 143.875 34.875]
+    fontSize		    12
+    chart		    2
+    treeNode		    [2 0 4 6]
+    subviewer		    2
+    subviewS {
+      x1		      -15
+      y1		      -15
+      pos		      [0 0 151.875 49.125]
+    }
+    type		    OR_STATE
+    decomposition	    SET_STATE
+    eml {
+      fimathString	      "fimath(...\n'RoundMode', 'floor',...\n'OverflowMode', 'wrap',...\n'ProductMode', 'KeepLSB', 'ProductWordLength', 32,...\n'SumMode', 'KeepLSB', 'SumWordLength', 32,...\n'CastBeforeSum', false)"
+    }
+  }
+  state {
+    id			    4
+    labelString		    "TestCase2\nentry: TestCase = 2;"
+    position		    [126.5 118.875 108.125 33.375]
+    fontSize		    12
+    chart		    2
+    treeNode		    [2 0 0 3]
+    subviewer		    2
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    5
+    labelString		    "Stop"
+    position		    [285.5 346.125 132.125 39.375]
+    fontSize		    12
+    chart		    2
+    treeNode		    [2 0 6 0]
+    subviewer		    2
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    6
+    labelString		    "TestCase3\nentry: TestCase = 3;"
+    position		    [82.6451 202.4155 96.1168 26.9201]
+    fontSize		    12
+    chart		    2
+    treeNode		    [2 0 3 5]
+    subviewer		    2
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  junction {
+    id			    7
+    position		    [361.25 231.8216 7]
+    chart		    2
+    linkNode		    [2 0 0]
+    subviewer		    2
+    type		    CONNECTIVE_JUNCTION
+  }
+  transition {
+    id			    8
+    labelString		    "{variant=0;}"
+    labelPosition	    [412.863 105.913 61.581 14.957]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 404.8065 69.0083 0 0]
+    }
+    dst {
+      id		      3
+      intersection	      [1 0 -1 0.391 404.8065 154.6958 0 0]
+    }
+    midPoint		    [404.8065 109.4541]
+    chart		    2
+    linkNode		    [2 0 11]
+    dataLimits		    [402.406 407.206 69.008 154.696]
+    subviewer		    2
+    drawStyle		    SMART
+    executionOrder	    1
+  }
+  transition {
+    id			    9
+    labelString		    "{variant=variant+1;}"
+    labelPosition	    [408.146 229.611 104.3 14.957]
+    fontSize		    12
+    src {
+      id		      7
+      intersection	      [0 0.9174 0.398 -1 367.6717 234.6076 0 0]
+    }
+    dst {
+      id		      3
+      intersection	      [3 0 1 0.5079 419.3633 189.5708 0 0]
+    }
+    midPoint		    [402.8523 227.8015]
+    chart		    2
+    linkNode		    [2 10 13]
+    dataLimits		    [367.672 421.763 189.571 236.579]
+    stampAngle		    -1.9801
+    subviewer		    2
+    slide {
+      midPointSticky	      1
+    }
+    executionOrder	    1
+  }
+  transition {
+    id			    10
+    labelString		    "after(200, tick)"
+    labelPosition	    [83.038 179.392 77.67 14.957]
+    fontSize		    12
+    src {
+      id		      4
+      intersection	      [3 0 1 0.3757 194 152.25 0 -63.2965]
+    }
+    dst {
+      id		      6
+      intersection	      [1 0 -1 0.641 144.2561 202.4155 0 13.5526]
+    }
+    midPoint		    [167.507 173.9404]
+    chart		    2
+    linkNode		    [2 11 9]
+    dataLimits		    [141.856 194 152.25 202.415]
+    stampAngle		    4.2097
+    subviewer		    2
+    drawStyle		    SMART
+    slide {
+      mode		      MIRROR_SLIDE
+      sticky		      BOTH_STICK
+      arcL		      40.625
+      arcClockDir	      COUNTER_CLOCKWISE
+    }
+    executionOrder	    1
+  }
+  transition {
+    id			    11
+    labelString		    "after(200, tick)"
+    labelPosition	    [263.34 139.266 77.67 14.957]
+    fontSize		    12
+    src {
+      id		      3
+      intersection	      [4 -1 0 0.5108 348.5565 171.7568 0 -17.061]
+    }
+    dst {
+      id		      4
+      intersection	      [2 1 0 0.4382 234.625 133.5 0 -18.75]
+    }
+    midPoint		    [293.4425 151.3817]
+    chart		    2
+    linkNode		    [2 8 10]
+    dataLimits		    [234.625 348.556 131.1 171.757]
+    stampAngle		    -1.#IND
+    subviewer		    2
+    drawStyle		    SMART
+    slide {
+      mode		      MIRROR_SLIDE
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+  }
+  transition {
+    id			    12
+    labelPosition	    [349.916 283.361 7.767 14.957]
+    fontSize		    12
+    src {
+      id		      5
+      intersection	      [1 0 -1 0.579 362 346.125 0 0]
+    }
+    dst {
+      id		      7
+      intersection	      [0 -0.453 0.8915 -1 358.0792 238.0623 0 0]
+    }
+    midPoint		    [351.6051 292.0167]
+    chart		    2
+    linkNode		    [2 13 0]
+    dataLimits		    [349.183 362 238.062 346.125]
+    stampAngle		    -0.4701
+    subviewer		    2
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+      arcL		      0.75
+      arcClockDir	      COUNTER_CLOCKWISE
+    }
+    executionOrder	    1
+  }
+  transition {
+    id			    13
+    labelString		    "after(200, tick)"
+    labelPosition	    [152.582 304.823 77.67 14.957]
+    fontSize		    12
+    src {
+      id		      6
+      intersection	      [3 0 1 0.6939 112.063 229.3356 0 66.699]
+    }
+    dst {
+      id		      5
+      intersection	      [4 -1 0 0.456 285.5 367.544 0 -21.419]
+    }
+    midPoint		    [171.3009 329.4096]
+    chart		    2
+    linkNode		    [2 9 12]
+    dataLimits		    [112.063 285.5 229.336 369.944]
+    stampAngle		    -1.#IND
+    subviewer		    2
+    drawStyle		    SMART
+    slide {
+      mode		      MIRROR_SLIDE
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+  }
+  data {
+    id			    14
+    name		    "TestCase"
+    linkNode		    [2 0 15]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      type {
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "double"
+  }
+  data {
+    id			    15
+    name		    "variant"
+    linkNode		    [2 14 0]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      type {
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "double"
+  }
+  instance {
+    id			    16
+    name		    "Generate constant 5/TestDataVariants Sequence/variant dependent \nTest Control"
+    machine		    1
+    chart		    2
+  }
+  chart {
+    id			    17
+    name		    "Generate decrease 6/TestDataVariants Sequence/variant dependent \nTest Control"
+    windowPosition	    [346.5 277.5 810.75 475.5]
+    viewLimits		    [32.27 600.09 68.37 393.632]
+    zoomFactor		    0.74
+    screen		    [1 1 1600 1200 1.333333333333333]
+    treeNode		    [0 21 0 0]
+    firstTransition	    23
+    firstJunction	    22
+    viewObj		    17
+    machine		    1
+    decomposition	    CLUSTER_CHART
+    firstData		    29
+    chartFileNumber	    3
+    disableImplicitCasting  1
+  }
+  state {
+    id			    18
+    labelString		    "TestCase1\nentry: TestCase = 1;"
+    position		    [355.7722 163.0216 128.796 34.0424]
+    fontSize		    12
+    chart		    17
+    treeNode		    [17 0 19 20]
+    subviewer		    17
+    subviewS {
+      x1		      -15
+      y1		      -15
+      pos		      [0 0 151.875 49.125]
+    }
+    type		    OR_STATE
+    decomposition	    SET_STATE
+    eml {
+      fimathString	      "fimath(...\n'RoundMode', 'floor',...\n'OverflowMode', 'wrap',...\n'ProductMode', 'KeepLSB', 'ProductWordLength', 32,...\n'SumMode', 'KeepLSB', 'SumWordLength', 32,...\n'CastBeforeSum', false)"
+    }
+  }
+  state {
+    id			    19
+    labelString		    "TestCase2\nentry: TestCase = 2;"
+    position		    [126.5 118.875 108.125 33.375]
+    fontSize		    12
+    chart		    17
+    treeNode		    [17 0 21 18]
+    subviewer		    17
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    20
+    labelString		    "Stop"
+    position		    [285.5 346.125 132.125 39.375]
+    fontSize		    12
+    chart		    17
+    treeNode		    [17 0 18 0]
+    subviewer		    17
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    21
+    labelString		    "TestCase0\nentry: TestCase = 1;"
+    position		    [481.6788 111.9417 108.328 44.6818]
+    fontSize		    12
+    chart		    17
+    treeNode		    [17 0 0 19]
+    subviewer		    17
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  junction {
+    id			    22
+    position		    [361.25 231.8216 7]
+    chart		    17
+    linkNode		    [17 0 0]
+    subviewer		    17
+    type		    CONNECTIVE_JUNCTION
+  }
+  transition {
+    id			    23
+    labelString		    "{variant=0;}"
+    labelPosition	    [432.037 106.852 61.581 14.957]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 396.9432 76.3489 0 0]
+    }
+    dst {
+      id		      21
+      intersection	      [4 -1 0 0.55 481.6788 132.0485 0 0]
+    }
+    midPoint		    [424.6102 118.1152]
+    chart		    17
+    linkNode		    [17 0 26]
+    dataLimits		    [396.943 481.679 76.349 134.449]
+    subviewer		    17
+    drawStyle		    SMART
+    executionOrder	    1
+  }
+  transition {
+    id			    24
+    labelPosition	    [406.286 233.432 7.767 14.957]
+    fontSize		    12
+    src {
+      id		      22
+      intersection	      [0 0.9174 0.398 -1 367.6717 234.6076 0 0]
+    }
+    dst {
+      id		      18
+      intersection	      [3 0 1 0.5079 419.158 197.064 0 0]
+    }
+    midPoint		    [400.7945 231.1354]
+    chart		    17
+    linkNode		    [17 25 27]
+    dataLimits		    [367.672 421.558 197.064 236.977]
+    stampAngle		    -1.9801
+    subviewer		    17
+    slide {
+      midPointSticky	      1
+    }
+    executionOrder	    1
+  }
+  transition {
+    id			    25
+    labelString		    "after(200, tick)"
+    labelPosition	    [131.838 304.224 77.67 14.957]
+    fontSize		    12
+    src {
+      id		      19
+      intersection	      [3 0 1 0.3757 194 152.25 0 40.625]
+    }
+    dst {
+      id		      20
+      intersection	      [4 -1 0 0.419 285.5 369 0 -22.875]
+    }
+    midPoint		    [207.8415 295.7656]
+    chart		    17
+    linkNode		    [17 28 24]
+    dataLimits		    [194 285.5 152.25 371.4]
+    stampAngle		    4.2097
+    subviewer		    17
+    drawStyle		    SMART
+    slide {
+      mode		      MIRROR_SLIDE
+      sticky		      BOTH_STICK
+      arcL		      40.625
+      arcClockDir	      COUNTER_CLOCKWISE
+    }
+    executionOrder	    1
+  }
+  transition {
+    id			    26
+    labelString		    "after(200, tick)"
+    labelPosition	    [264.173 139.942 77.67 14.957]
+    fontSize		    12
+    src {
+      id		      18
+      intersection	      [4 -1 0 0.4988 355.7722 180.0826 0 -17.061]
+    }
+    dst {
+      id		      19
+      intersection	      [2 1 0 0.4382 234.625 133.5 0 -18.75]
+    }
+    midPoint		    [296.9195 155.2733]
+    chart		    17
+    linkNode		    [17 23 28]
+    dataLimits		    [234.625 355.772 131.1 180.083]
+    stampAngle		    -1.#IND
+    subviewer		    17
+    drawStyle		    SMART
+    slide {
+      mode		      MIRROR_SLIDE
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+  }
+  transition {
+    id			    27
+    labelString		    "{variant=variant+1;}"
+    labelPosition	    [351.796 285.396 104.3 14.957]
+    fontSize		    12
+    src {
+      id		      20
+      intersection	      [1 0 -1 0.579 362 346.125 0 0]
+    }
+    dst {
+      id		      22
+      intersection	      [0 -0.453 0.8915 -1 358.0792 238.0623 0 0]
+    }
+    midPoint		    [351.6051 292.0167]
+    chart		    17
+    linkNode		    [17 24 0]
+    dataLimits		    [348.747 362 238.062 346.125]
+    stampAngle		    -0.4701
+    subviewer		    17
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+      arcL		      0.75
+      arcClockDir	      COUNTER_CLOCKWISE
+    }
+    executionOrder	    1
+  }
+  transition {
+    id			    28
+    labelString		    "after(400, tick)"
+    labelPosition	    [351.244 131.225 77.67 14.957]
+    fontSize		    12
+    src {
+      id		      21
+      intersection	      [4 -1 0 0.2883 481.6788 143.7432 0 12.8803]
+    }
+    dst {
+      id		      18
+      intersection	      [1 0 -1 0.494 419.3987 163.0216 0 -62.2801]
+    }
+    midPoint		    [440.7288 141.2622]
+    chart		    17
+    linkNode		    [17 26 25]
+    dataLimits		    [416.999 481.679 141.234 163.022]
+    stampAngle		    -1.#IND
+    subviewer		    17
+    drawStyle		    SMART
+    slide {
+      mode		      MIRROR_SLIDE
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+  }
+  data {
+    id			    29
+    name		    "TestCase"
+    linkNode		    [17 0 30]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      type {
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "double"
+  }
+  data {
+    id			    30
+    name		    "variant"
+    linkNode		    [17 29 0]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      type {
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "double"
+  }
+  instance {
+    id			    31
+    name		    "Generate decrease 6/TestDataVariants Sequence/variant dependent \nTest Control"
+    machine		    1
+    chart		    17
+  }
+  data {
+    id			    32
+    name		    "Activate"
+    linkNode		    [1 0 0]
+    scope		    LOCAL_DATA
+    machine		    1
+    props {
+      type {
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+    }
+    dataType		    "double"
+  }
+  target {
+    id			    33
+    name		    "sfun"
+    description		    "Default Simulink S-Function Target."
+    machine		    1
+    linkNode		    [1 0 0]
+  }
+}

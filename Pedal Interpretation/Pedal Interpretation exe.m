@@ -1,0 +1,63 @@
+% This functions are applied to calculate the quality metrics: 
+%
+% Variants coverage for a SigF
+%
+input_coverage_1('Pedal_Interpretation_exe');
+
+% Results: 
+% ----------------------------------------------
+% SUT Input signal : v_Fzg
+% Signal Range and Partition Point : '[-10,70]{0}'
+% Partition Point(s) : 0
+% Expected Signal Range is divided into:
+% {-10}, (-10,0), {0}, (0,70),{70}
+% Actual Test Signal: [-10,70]
+% input coverage is: 5/5- 100%
+% ------------------------
+% SUT Input signal : phi_Acc
+% Signal Range and Partition Point : '[0,100]{}'
+% Partition Point(s) : empty
+% Actual Test Signal: [0,100]
+% input coverage is: 3/3- 100%
+% ------------------------
+% SUT Input signal : phi_Brake
+% Signal Range and Partition Point : '[0,100]{}'
+% Partition Point(s) : empty
+% Actual Test Signal: [0,99.9525]
+% input coverage is: 2/3- 67%
+% ----------------------------------------------
+
+% Variants coverage during test execution
+%
+output_coverage_1('Pedal_Interpretation_exe');
+
+% Results: 
+% ----------------------------------------------
+% The SUT output signal: Acc Pedal Signal Range : [0,1]
+% The SUT output signal: Acc Pedal partition point(s) : EMPTY
+% Actual Output Signal Value: [0,1]
+% The SUT output signal: Acc Pedal testing coverage is: 3/3- 100%
+% ----------------------------------------------
+% The SUT output signal: Brake Pedal Signal Range : [0,1]
+% The SUT output signal: Brake Pedal partition point(s) : EMPTY
+% Actual Output Signal Value: [0,1]
+% The SUT output signal: Brake Pedal testing coverage is: 3/3- 100%
+% ----------------------------------------------
+% The SUT output signal: T_des Drive Signal Range : [-8000,2300]
+% The SUT output signal: T_des Drive partition point(s) : {0}
+% Actual Output Signal Value: [-8099.5653,2300]
+% The SUT output signal: T_des Drive testing coverage is: 5/5- 100%
+% ----------------------------------------------
+% The SUT output signal: T_des_Brake Signal Range : [0,4000]
+% The SUT output signal: T_des_Brake partition point(s) : {0}
+% Actual Output Signal Value: [0,3998.1]
+% The SUT output signal: T_des_Brake testing coverage is: 2/3- 67%
+% ----------------------------------------------
+
+
+% This functions are used to obtain the test harness level automatically. 
+%
+% This functions are used to obtain the test data level and test control automatically. 
+%
+% This functions are used to obtain the test data variants automatically. 
+%

@@ -1,0 +1,49 @@
+CC     = "f:\r2008bpre\sys\lcc\bin\lcc.exe"
+LD     = "f:\r2008bpre\sys\lcc\bin\lcclnk.exe"
+LIBCMD = "f:\r2008bpre\sys\lcc\bin\lcclib.exe"
+CFLAGS = -c -Zp8 -DMATLAB_MEX_FILE -noregistrylookup
+LDFLAGS = -s -dll -L"f:\r2008bpre\sys\lcc\lib"
+LIBFLAGS = 
+
+OBJECTS = \
+	"Pedal_Interpretation_Test_sfun.obj"\
+	"Pedal_Interpretation_Test_sfun_registry.obj"\
+	"c2_Pedal_Interpretation_Test.obj"\
+	"c3_Pedal_Interpretation_Test.obj"\
+	"c6_Pedal_Interpretation_Test.obj"\
+	"c7_Pedal_Interpretation_Test.obj"\
+	"c8_Pedal_Interpretation_Test.obj"\
+	"c14_Pedal_Interpretation_Test.obj"\
+	"lccstub.obj"\
+	"f:\r2008bpre\sys\lcc\mex\lccdef.def"\
+	"f:\r2008bpre\stateflow\c\debugger\lib\win32\sfc_debuglcc.lib"\
+	"f:\r2008bpre\stateflow\c\mex\lib\win32\sfc_mexlcc.lib"\
+	"f:\r2008bpre\extern\lib\win32\lcc\libmex.lib"\
+	"f:\r2008bpre\extern\lib\win32\lcc\libmx.lib"\
+	"f:\r2008bpre\extern\lib\win32\lcc\libfixedpoint.lib"\
+	"f:\r2008bpre\extern\lib\win32\lcc\libut.lib"\
+	"f:\r2008bpre\extern\lib\win32\lcc\libmwmathutil.lib"\
+
+INCLUDE_PATH= -I"f:\r2008bpre\sys\lcc\include"  -I"f:\r2008bpre\extern\include"  -I"f:\r2008bpre\simulink\include"  -I"f:\r2008bpre\stateflow\c\mex\include"  -I"f:\r2008bpre\stateflow\c\debugger\include" 
+ 
+
+Pedal_Interpretation_Test_sfun.mexw32 : $(MAKEFILE) $(OBJECTS)
+	$(LD) $(LDFLAGS) -o Pedal_Interpretation_Test_sfun.mexw32 @Pedal_Interpretation_Test_sfun.lmko
+Pedal_Interpretation_Test_sfun.obj :	"Pedal_Interpretation_Test_sfun.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "Pedal_Interpretation_Test_sfun.c"
+Pedal_Interpretation_Test_sfun_registry.obj :	"Pedal_Interpretation_Test_sfun_registry.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "Pedal_Interpretation_Test_sfun_registry.c"
+c2_Pedal_Interpretation_Test.obj :	"c2_Pedal_Interpretation_Test.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c2_Pedal_Interpretation_Test.c"
+c3_Pedal_Interpretation_Test.obj :	"c3_Pedal_Interpretation_Test.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c3_Pedal_Interpretation_Test.c"
+c6_Pedal_Interpretation_Test.obj :	"c6_Pedal_Interpretation_Test.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c6_Pedal_Interpretation_Test.c"
+c7_Pedal_Interpretation_Test.obj :	"c7_Pedal_Interpretation_Test.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c7_Pedal_Interpretation_Test.c"
+c8_Pedal_Interpretation_Test.obj :	"c8_Pedal_Interpretation_Test.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c8_Pedal_Interpretation_Test.c"
+c14_Pedal_Interpretation_Test.obj :	"c14_Pedal_Interpretation_Test.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c14_Pedal_Interpretation_Test.c"
+lccstub.obj :	"f:\r2008bpre\sys\lcc\mex\lccstub.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "f:\r2008bpre\sys\lcc\mex\lccstub.c"

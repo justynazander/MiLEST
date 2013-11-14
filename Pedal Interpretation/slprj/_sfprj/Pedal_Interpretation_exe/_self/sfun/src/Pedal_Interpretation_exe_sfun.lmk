@@ -1,0 +1,49 @@
+CC     = "c:\program files\matlab\r2008b\sys\lcc\bin\lcc.exe"
+LD     = "c:\program files\matlab\r2008b\sys\lcc\bin\lcclnk.exe"
+LIBCMD = "c:\program files\matlab\r2008b\sys\lcc\bin\lcclib.exe"
+CFLAGS = -c -Zp8 -DMATLAB_MEX_FILE -noregistrylookup
+LDFLAGS = -s -dll -L"c:\program files\matlab\r2008b\sys\lcc\lib"
+LIBFLAGS = 
+
+OBJECTS = \
+	"Pedal_Interpretation_exe_sfun.obj"\
+	"Pedal_Interpretation_exe_sfun_registry.obj"\
+	"c2_Pedal_Interpretation_exe.obj"\
+	"c3_Pedal_Interpretation_exe.obj"\
+	"c6_Pedal_Interpretation_exe.obj"\
+	"c7_Pedal_Interpretation_exe.obj"\
+	"c8_Pedal_Interpretation_exe.obj"\
+	"c14_Pedal_Interpretation_exe.obj"\
+	"lccstub.obj"\
+	"c:\program files\matlab\r2008b\sys\lcc\mex\lccdef.def"\
+	"c:\program files\matlab\r2008b\stateflow\c\debugger\lib\win32\sfc_debuglcc.lib"\
+	"c:\program files\matlab\r2008b\stateflow\c\mex\lib\win32\sfc_mexlcc.lib"\
+	"c:\program files\matlab\r2008b\extern\lib\win32\lcc\libmex.lib"\
+	"c:\program files\matlab\r2008b\extern\lib\win32\lcc\libmx.lib"\
+	"c:\program files\matlab\r2008b\extern\lib\win32\lcc\libfixedpoint.lib"\
+	"c:\program files\matlab\r2008b\extern\lib\win32\lcc\libut.lib"\
+	"c:\program files\matlab\r2008b\extern\lib\win32\lcc\libmwmathutil.lib"\
+
+INCLUDE_PATH= -I"c:\program files\matlab\r2008b\sys\lcc\include"  -I"c:\program files\matlab\r2008b\extern\include"  -I"c:\program files\matlab\r2008b\simulink\include"  -I"c:\program files\matlab\r2008b\stateflow\c\mex\include"  -I"c:\program files\matlab\r2008b\stateflow\c\debugger\include" 
+ 
+
+Pedal_Interpretation_exe_sfun.mexw32 : $(MAKEFILE) $(OBJECTS)
+	$(LD) $(LDFLAGS) -o Pedal_Interpretation_exe_sfun.mexw32 @Pedal_Interpretation_exe_sfun.lmko
+Pedal_Interpretation_exe_sfun.obj :	"Pedal_Interpretation_exe_sfun.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "Pedal_Interpretation_exe_sfun.c"
+Pedal_Interpretation_exe_sfun_registry.obj :	"Pedal_Interpretation_exe_sfun_registry.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "Pedal_Interpretation_exe_sfun_registry.c"
+c2_Pedal_Interpretation_exe.obj :	"c2_Pedal_Interpretation_exe.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c2_Pedal_Interpretation_exe.c"
+c3_Pedal_Interpretation_exe.obj :	"c3_Pedal_Interpretation_exe.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c3_Pedal_Interpretation_exe.c"
+c6_Pedal_Interpretation_exe.obj :	"c6_Pedal_Interpretation_exe.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c6_Pedal_Interpretation_exe.c"
+c7_Pedal_Interpretation_exe.obj :	"c7_Pedal_Interpretation_exe.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c7_Pedal_Interpretation_exe.c"
+c8_Pedal_Interpretation_exe.obj :	"c8_Pedal_Interpretation_exe.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c8_Pedal_Interpretation_exe.c"
+c14_Pedal_Interpretation_exe.obj :	"c14_Pedal_Interpretation_exe.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c14_Pedal_Interpretation_exe.c"
+lccstub.obj :	"c:\program files\matlab\r2008b\sys\lcc\mex\lccstub.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c:\program files\matlab\r2008b\sys\lcc\mex\lccstub.c"

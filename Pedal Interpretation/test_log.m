@@ -1,0 +1,17 @@
+function [s,u] = test_log (tar)
+
+sim(tar);
+load('v_Vhcl')
+nr = size(v_Vhcl);
+nr_sig = nr(1)-1; % the number of signal
+col = v_Vhcl(2,:);
+u = [max(col)];
+s = [min(col)];
+if nr_sig > 1
+    for i = 3: nr(1)
+        col = v_Vhcl(i,:);
+        u = [u max(col)];
+        s = [s min(col)];    
+    end
+end
+
